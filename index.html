@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Magical Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Magical Diary</h1>
+            <p class="subtitle">Document your magical journey</p>
+        </header>
+        
+        <section class="entry-form">
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" value="<?php echo date('Y-m-d'); ?>">
+            </div>
+            
+            <div class="form-group">
+                <label for="tarotCard">Tarot Card of the Day (Optional):</label>
+                <input type="text" id="tarotCard" placeholder="e.g., The Fool">
+            </div>
+            
+            <div class="form-group">
+                <label for="cardPosition">Card Position (Optional):</label>
+                <select id="cardPosition">
+                    <option value="">-- Select Position --</option>
+                    <option value="upright">Upright</option>
+                    <option value="reversed">Reversed</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="tarotInterpretation">Tarot Interpretation (Optional):</label>
+                <textarea id="tarotInterpretation" placeholder="What does this card mean to you today?"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="spellName">Spell Name (Optional):</label>
+                <input type="text" id="spellName" placeholder="Name of your spell">
+            </div>
+            
+            <div class="form-group">
+                <label for="spellDescription">Spell Description (Optional):</label>
+                <textarea id="spellDescription" placeholder="Describe the spell and its purpose"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="reflection">Reflection of the Day:</label>
+                <textarea id="reflection" placeholder="How did your magical practice affect you today? What insights or feelings arose?" required></textarea>
+            </div>
+            
+            <button id="downloadBtn">Download Diary Entry</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
